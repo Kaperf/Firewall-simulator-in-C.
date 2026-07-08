@@ -23,27 +23,28 @@ The simulator uses the first match wins approach. This means that rules are chec
 - summary of allowed and blocked packets,
 - console table showing filtering results.
 # Example default rules
-Rule name	Source IP	Port	Protocol	Action
-Block SSH	*	22	TCP	Block
-Allow HTTP	*	80	TCP	Allow
-Allow HTTPS	*	443	TCP	Allow
-Block MySQL	*	3306	TCP	Block
-Block all UDP	*	-1	UDP	Block
+|Rule name	|Source IP|	Port|	Protocol|	Action|
+|---|---|---|---|---|
+|Block SSH	|*	|22	|TCP	|Block|
+|Allow HTTP	|*	|80	|TCP	|Allow|
+|Allow HTTPS|	*	|443	|TCP	|Allow|
+|Block MySQL|	*	|3306	|TCP	|Block|
+|Block all UDP	|*	|-1	|UDP	|Block|
 # Example packets
-Source IP	Port	Protocol
-192.168.1.10	22	TCP
-8.8.8.8	80	TCP
-10.0.0.5	53	UDP
-1.1.1.1	443	TCP
+|Source IP|	Port|Protocol|
+|---|---|---|
+|192.168.1.10	|22	|TCP
+|8.8.8.8	|80	|TCP
+|10.0.0.5	|53	|UDP
+|1.1.1.1	|443	|TCP
 # Example output
-"+-----------------+----------+-------+----------+------------------+------------------------------------------+
+
 | Source IP       | Protocol | Port  | Action   | Rule             | Reason                                   |
-+-----------------+----------+-------+----------+------------------+------------------------------------------+
+| ---|---|---|---|---|---|
 | 192.168.1.10    | TCP      | 22    | Block    | Block SSH        | SSH traffic is blocked                   |
 | 8.8.8.8         | TCP      | 80    | Allow    | Allow HTTP       | HTTP traffic is allowed                  |
 | 10.0.0.5        | UDP      | 53    | Block    | Block all UDP    | UDP traffic is blocked                   |
 | 1.1.1.1         | TCP      | 443   | Allow    | Allow HTTPS      | HTTPS traffic is allowed                 |
-+-----------------+----------+-------+----------+------------------+------------------------------------------+"
 # Program menu
 1. Show rules
 2. Show count of allowed packets
