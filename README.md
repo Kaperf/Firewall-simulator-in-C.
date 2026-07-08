@@ -36,14 +36,14 @@ Source IP	Port	Protocol
 10.0.0.5	53	UDP
 1.1.1.1	443	TCP
 # Example output
-+-----------------+----------+-------+----------+------------------+------------------------------------------+
+"+-----------------+----------+-------+----------+------------------+------------------------------------------+
 | Source IP       | Protocol | Port  | Action   | Rule             | Reason                                   |
 +-----------------+----------+-------+----------+------------------+------------------------------------------+
 | 192.168.1.10    | TCP      | 22    | Block    | Block SSH        | SSH traffic is blocked                   |
 | 8.8.8.8         | TCP      | 80    | Allow    | Allow HTTP       | HTTP traffic is allowed                  |
 | 10.0.0.5        | UDP      | 53    | Block    | Block all UDP    | UDP traffic is blocked                   |
 | 1.1.1.1         | TCP      | 443   | Allow    | Allow HTTPS      | HTTPS traffic is allowed                 |
-+-----------------+----------+-------+----------+------------------+------------------------------------------+
++-----------------+----------+-------+----------+------------------+------------------------------------------+"
 # Program menu
 1. Show rules
 2. Show count of allowed packets
@@ -56,13 +56,10 @@ Source IP	Port	Protocol
 9. Show packets
 0. Exit
 # How to compile
-Using GCC:
-gcc main.c -o firewall_simulator
-How to run
-On Linux/macOS:
-./firewall_simulator
-On Windows:
-firewall_simulator.exe
+- Using GCC: gcc main.c -o firewall_simulator
+- How to run
+- On Linux/macOS: ./firewall_simulator
+- On Windows: firewall_simulator.exe
 # Project structure
 - main.c
 - packetsAndRules.h
