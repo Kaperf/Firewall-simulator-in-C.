@@ -12,9 +12,9 @@ The simulator uses the first match wins approach. This means that rules are chec
 - rule-based packet filtering,
 - filtering by source IP, port and protocol,
 - wildcard support:
-- * for any IP address,
+- "*" for any IP address,
 - -1 for any port,
-- * for any protocol,
+- "*" for any protocol,
 - default firewall rules,
 - random packet generation,
 - user-defined rules,
