@@ -1,4 +1,4 @@
-#include "countingFunctions.c"
+#include "countingFunctions.h"
 	
 void menu(RuleArray* rulearr, PacketArray* packetarr){
 int looping = 1;
